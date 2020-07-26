@@ -1,16 +1,10 @@
 import type { DrawFunction } from "./types";
 
 export class Layer {
-	public readonly name: string;
-	public readonly draw: DrawFunction;
-	constructor({
-		name,
-		draw,
-	}: {
-		name: string;
-		draw: DrawFunction;
-	}) {
-		this.name = name;
-		this.draw = draw;
-	}
+  public readonly id: string;
+  public readonly draw: DrawFunction;
+  constructor({ id, draw }: { id: string; draw: DrawFunction }) {
+    this.id = id;
+    this.draw = draw;
+  }
 }
